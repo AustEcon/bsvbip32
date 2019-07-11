@@ -1,7 +1,16 @@
-bitsv_bip32
+bsvbip32
 ============
 
 BIP32 Hierarchical Deterministic wallet functions - extends bitsv
+
+Noticeboard
+-----------
+
+This project is still in alpha. Expect lots to change - pin your versions if you are using this code!
+
+I will post a road map here in due course.
+
+- I essentially want to have the "leaves of the BIP32 tree" inheriting all of the functionality of a bitsv.PrivateKey to make building prototype applications in Python a breeze.
 
 Examples
 ---------
@@ -10,7 +19,7 @@ Examples
 
 .. code-block:: python
 
-    >>> from bitsv_bip32 import Bip32
+    >>> from bsvbip32 import Bip32
     >>> xprv = Bip32("xprv9s21ZrQH143K4Un4SHjdvXpzzdQjpm7vVhQ79BMi5V58nptUo4NGqytwH68XAVj5LkDxjSqdVjdDinFCT8WqfBT7zigdtaGcrffTmBdwFH5")
 
 
@@ -69,3 +78,7 @@ Examples
     >>> # This is how e.g. handcash, moneybutton, paymail servers generate addresses without ever seeing your private key.
     >>> # First, lets use the xprv master node (from above) to get the xpub!
     >>> xprv.get_xpub()
+
+TODO
+----
+Complete examples for view-only wallet + ECDSA signatures.
